@@ -6,9 +6,6 @@ const webpack = require('webpack');
 //  https://webpack.js.org/plugins/mini-css-extract-plugin/
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-// https://webpack.js.org/plugins/copy-webpack-plugin/
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-
 // https://webpack.js.org/plugins/html-webpack-plugin/
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -83,7 +80,7 @@ module.exports = {
     filename: `${PATHS.assets}/js/[name].${isProd ? '[contenthash].' : ''}js`,
     path: PATHS.dist,
     pathinfo: isProd,
-    publicPath: `/`,
+    publicPath: '/etter/',
   },
   optimization: {
     splitChunks: isProd ? {
