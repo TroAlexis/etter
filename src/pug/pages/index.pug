@@ -1,0 +1,67 @@
+extends ../layout/main
+
+block variables
+  - const title = 'Page title';
+  - const description = 'Page description';
+  - const pageClass = 'index-page';
+
+block head
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+
+block content
+  include ../includes/translate-websites/translate-websites
+
+  include ../includes/translate-urgent/translate-urgent
+
+  .u-container
+    include ../includes/features-cardlist/features-cardlist
+    +features-cardlist('Почему выбирают нас?')
+
+  .u-container
+    include ../includes/collapsible-list/collapsible-list
+    +collapsible-list([
+      {
+        heading: 'Что представляет собой компания Langify',
+        content: '',
+      },
+      {
+        heading: 'Кто выполняет перевод?',
+        content: '',
+      },
+      {
+        heading: 'Можно ли сохранить оформление страниц?',
+        content: '',
+      },
+      {
+        heading: 'Когда нужно оплатить заказ?',
+        content: 'Идейные соображения высшего порядка, а также дальнейшее развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также постоянное информационно-пропагандистское обеспечение нашей деятельности способствует подготовки и реализации новых предложений. Значимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции способствует подготовки и реализации систем массового участия. Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки соответствующий условий активизации. С другой стороны реализация намеченных плановых заданий в значительной степени обуславливает создание направлений прогрессивного развития. Значимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции требуют определения и уточнения дальнейших направлений развития.',
+        attributes: {
+          class: 'collapsible--open'
+        }
+      },
+      {
+        heading: 'Как осуществляется оплата?',
+        content: '',
+      },
+      {
+        heading: 'Что отличает нас от других?',
+        content: '',
+      },
+      {
+        heading: 'Предусмотрены ли минимальный объем заказа?',
+        content: '',
+      },
+      {
+        heading: 'Сроки исполнения и даты доставки',
+        content: '',
+      },
+      {
+        heading: 'Какие услуги перевода вы можете получить?',
+        content: '',
+      },
+      {
+        heading: 'Вы работаете с компаниями или частными лицами?',
+        content: '',
+      },
+    ])

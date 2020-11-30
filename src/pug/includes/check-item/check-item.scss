@@ -1,0 +1,24 @@
+.check-item {
+	display: flex;
+	align-items: center;
+
+	&__check {
+		@include size(20px);
+		flex: 0 0 20px;
+		margin-right: 8px;
+
+		background-color: map-get($colors, 'blue');
+		background-image: url('~Images/check.svg');
+		background-repeat: no-repeat;
+		background-position: center;
+		border-radius: 50%;
+	}
+
+	&__content {
+
+		color: map-get($colors, 'body');
+		font-weight: 500;
+		font-size: em(14px);
+		line-height: 140%;
+	}
+}

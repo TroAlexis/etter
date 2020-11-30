@@ -1,0 +1,45 @@
+$subheading-line-width: 2px;
+$subheading-padding-left: 14px;
+
+.lead {
+	font-family: 'Montserrat', sans-serif;
+
+
+	&__wrapper {
+
+	}
+
+	&__heading {
+
+		margin-bottom: em(16px, 48px);
+
+		color: map-get($colors, 'body');
+		font-weight: bold;
+		font-size: em(48px);
+		line-height: 110%;
+	}
+
+	&__subheading {
+		position: relative;
+
+		max-width: 400px + $subheading-line-width + $subheading-padding-left;
+
+		padding-left: em($subheading-line-width + $subheading-padding-left);
+
+		font-weight: 500;
+		font-size: em(16px);
+		line-height: 140%;
+
+		&::before {
+			@include pseudo();
+			top: 50%;
+			left: 0;
+
+			width: $subheading-line-width;
+			height: 93.1%;
+
+			background-color: map-get($colors, 'blue');
+			transform: translateY(-50%);
+		}
+	}
+}

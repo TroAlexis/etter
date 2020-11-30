@@ -1,0 +1,29 @@
+$font--main: 'Montserrat', sans-serif;
+
+// Size
+$color-font--main: #333;
+$font-size--main: 16px;
+$font-weight--main: normal;
+$line-height--main: 1;
+
+
+$width-limiting: 1360px;
+
+// Main colors
+$colors: (
+	'body': #333,
+	'subtext': #616161,
+	'blue': #176BCE,
+);
+
+// Map for breakpoints
+$breakpoints: (
+	'phone':        400px,
+	'phone-wide':   480px,
+	'phablet':      560px,
+	'tablet-small': 640px,
+	'tablet':       768px,
+	'tablet-wide':  1024px,
+	'desktop':      1248px,
+	'desktop-wide': 1440px
+);

@@ -1,0 +1,85 @@
+.collapsible {
+
+	font-family: Montserrat;
+
+	background: #fff;
+	@include mq('phablet', max) {
+		font-size: 14px;
+	}
+	@include mq('phone', max) {
+		font-size: 13px;
+	}
+
+
+	&__button {
+		position: relative;
+
+		width: 100%;
+
+		padding: em(35px, 18px) 0;
+
+		font-weight: 500;
+
+		font-size: em(18px);
+
+		font-family: inherit;
+		line-height: 130%;
+		text-align: left;
+
+		background: #fff;
+
+		&::after {
+
+			@include pseudo();
+
+			@include size(20px);
+			top: 50%;
+			right: 0;
+
+			transform: translateY(-50%);
+			cursor: pointer;
+			background: {
+
+				position: center;
+				image: url('~Images/add.svg');
+				size: cover;
+				repeat: no-repeat;
+			};
+		}
+	}
+
+	&__button-content {
+		display: block;
+		max-width: 88%;
+
+		cursor: pointer;
+	}
+
+	&__content {
+		@extend %subtext;
+		max-width: 92%;
+		max-height: 0;
+		overflow: hidden;
+
+		line-height: 160%;
+
+		transition: max-height 0.5s ease;
+	}
+
+	&__separator {
+		height: 1px;
+		margin: 0;
+
+		color: #e0e0e0;
+
+		background-color: #e0e0e0;
+		border: 0;
+	}
+
+	&--open {
+		.collapsible__content {
+			max-height: initial;
+			margin-bottom: em(48px);
+		}
+	}
+}

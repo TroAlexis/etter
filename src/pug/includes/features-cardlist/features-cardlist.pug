@@ -1,0 +1,36 @@
+include ../feature-card/feature-card
+include ../section-heading/section-heading
+
+mixin features-cardlist(heading)
+    if heading
+        +section-heading('Почему выбирают нас?')
+    ul.features-cardlist
+        -
+            const cards = [
+                {
+                    iconUrl: 'https://langify.net/image/email/icons/timer.svg',
+                    iconAlt: 'Timer',
+                    heading: 'Быстро',
+                    info: 'Ваш перевод моментально уходит в работу. На работу выделяется ограниченое кол-во времени, а переводчики работают по таймеру.',
+                },
+                {
+                    iconUrl: 'https://langify.net/image/email/icons/payment.svg',
+                    iconAlt: 'Money',
+                    heading: 'Доступно',
+                    info: 'Мы избавились от всех издержек традиционных бюро переводов, поэтому у нас так дешево',
+                },
+                {
+                    iconUrl: 'https://langify.net/image/email/icons/diamond.svg',
+                    iconAlt: 'Diamond',
+                    heading: 'Качественно',
+                    info: 'Все переводчики-партнеры Etter проходят многоуровневое тестирование, прежде чем получить доступ к системе.',
+                },
+                {
+                    iconUrl: 'https://langify.net/image/email/icons/translate.svg',
+                    iconAlt: 'Translation',
+                    heading: 'Платите потом',
+                    info: 'Мы по-настоящему доверяем нашим клиентам, поэтому придерживаемся принципа "Оплата после получения".',
+                },
+            ]
+        each card in cards
+          +feature-card(card).features-cardlist__card

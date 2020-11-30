@@ -1,0 +1,12 @@
+mixin collapsible(props)
+    - const { heading, content, type } = props;
+    if type
+        .collapsible&attributes(props.attributes)
+            button.collapsible__button(type='button')
+                span.collapsible__button-content=heading
+            p.collapsible__content=content
+    else
+        li.collapsible&attributes(props.attributes)
+            button.collapsible__button(type='button')
+                span.collapsible__button-content=heading
+            p.collapsible__content=content

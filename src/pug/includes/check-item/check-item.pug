@@ -1,0 +1,9 @@
+mixin check-item(content, type)
+    if type === 'div'
+        .check-item&attributes(attributes)
+            span.check-item__check
+            span.check-item__content!=content
+    else
+        li.check-item&attributes(attributes)
+            span.check-item__check
+            span.check-item__content!=content

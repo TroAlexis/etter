@@ -1,0 +1,67 @@
+@import 'utils/reset';
+@import 'utils/fonts';
+@import 'utils/global';
+
+html {
+	color: $color-font--main;
+	font-size: $font-size--main;
+	@include mq('desktop', max) {
+		font-size: 16px;
+	}
+	@include mq('tablet-wide', max) {
+		font-size: 16px;
+	}
+	@include mq('tablet', max) {
+		font-size: 16px;
+	}
+	@include mq('tablet-small', max) {
+		font-size: 16px;
+	}
+	@include mq('phablet', max) {
+		font-size: 16px;
+	}
+	@include mq('phone-wide', max) {
+		font-size: 16px;
+	}
+	@include mq('phone', max) {
+		font-size: 16px;
+	}
+}
+
+
+body {
+	margin: 0;
+	padding: 0;
+
+	font-weight: $font-weight--main;
+	font-size: $font-size--main;
+	font-family: $font--main;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { margin: 0; }
+
+a { text-decoration: none; }
+
+ul,
+li {
+	margin: 0;
+	padding: 0;
+
+	list-style-type: none;
+}
+
+// Modules
+// @import "~Scss/modules/my-module.scss";
+@import 'utils/ui';

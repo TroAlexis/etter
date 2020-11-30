@@ -1,0 +1,78 @@
+@import '~Includes/lead/lead';
+@import '~Includes/check-list/check-list';
+
+
+.translate-urgent {
+	display: flex;
+
+	@include mq('desktop', max) {
+		flex-direction: column;
+		align-items: stretch;
+	}
+	@include mq('tablet', max) {
+		font-size: 15px;
+	}
+	@include mq('phablet', max) {
+		font-size: 13.5px;
+	}
+
+	&__wrapper {
+		display: flex;
+		flex: 1 1 auto;
+		//flex-wrap: wrap;
+		justify-content: space-between;
+
+		@include mq('desktop', max) {
+			flex-direction: column;
+			align-items: center;
+			width: 90%;
+		}
+	}
+
+	&__lead,
+	&__hero-img {
+		max-width: 544px;
+		@include mq('desktop', max) {
+			max-width: 700px;
+		}
+	}
+
+	&__lead {
+		.lead__subheading {
+			margin-bottom: em(22px);
+		}
+	}
+
+	&__hero-img {
+		@include mq('desktop', max) {
+			order: -1;
+		}
+	}
+
+	&__info {
+		@extend %subtext;
+		max-width: 500px;
+		margin-bottom: em(32px);
+		@include mq('desktop', max) {
+			max-width: 700px;
+		}
+	}
+
+	&__checklist {
+		display: grid;
+		grid-row-gap: em(20px);
+		grid-template-columns: 1fr;
+	}
+
+	&__hero-img {
+		margin-top: -80px;
+		@include mq('desktop', max) {
+			margin-top: 0;
+			margin-left: -60px;
+		}
+		@include mq('tablet-small', max) {
+			align-self: center;
+			margin-left: -30px;
+		}
+	}
+}

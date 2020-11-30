@@ -1,0 +1,16 @@
+mixin feature-card(props)
+    -
+        const {
+          iconUrl, iconAlt, heading, info, type
+        } = props;
+
+    if type
+        .feature-card&attributes(attributes)
+            img.feature-card__icon(src=iconUrl alt=iconAlt)
+            h4.feature-card__heading=heading
+            p.feature-card__info=info
+    else
+        li.feature-card&attributes(attributes)
+            img.feature-card__icon(src=iconUrl)
+            h4.feature-card__heading=heading
+            p.feature-card__info=info

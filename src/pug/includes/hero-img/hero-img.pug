@@ -1,0 +1,18 @@
+mixin hero-img(imgSet)
+  picture.hero-img&attributes(attributes)
+    - const mobile = '639px'
+    - const desktop = '640px'
+    - const { x1, x2, mob, alt } = imgSet;
+    source(
+        media=`(min-width: ${desktop})`
+        srcset=`${x1} 1x, ${x2} 2x`
+        type='image/jpeg'
+        alt=alt
+        )
+    source(
+        media=`(max-width: ${mobile})`
+        srcset=mob,
+        type='image/jpeg'
+        alt=alt
+    )
+    img(src=x1 type='image/jpeg').hero-img__img

@@ -1,0 +1,71 @@
+@import '~Includes/lead/lead';
+@import '~Includes/check-list/check-list';
+
+$info-gap: 9px;
+
+$general-gap: 15px;
+
+.translate-websites {
+	display: flex;
+
+	@include mq('desktop', max) {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	@include mq('tablet', max) {
+		font-size: 15px;
+	}
+	@include mq('phablet', max) {
+		font-size: 13.5px;
+	}
+
+	&__wrapper {
+		display: flex;
+		flex: 1 1 auto;
+		//flex-wrap: wrap;
+		justify-content: space-between;
+
+		@include mq('desktop', max) {
+			flex-direction: column;
+		}
+	}
+
+	&__lead,
+	&__info {
+		max-width: 544px;
+	}
+
+	&__lead {
+		@include mq('desktop', max) {
+			margin-bottom: 50px;
+		}
+
+		.lead__subheading {
+			margin-bottom: em(50px);
+		}
+	}
+
+	&__checklist {
+		display: grid;
+		grid-row-gap: em(20px);
+		grid-column-gap: em(10px);
+		grid-template-columns: repeat(2, 1fr);
+
+		@include mq('phone', max) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__info {
+
+		@extend %subtext;
+		margin: -1 * em($info-gap) 0 -1 * em($info-gap) 0;
+		@include mq('desktop', max) {
+			max-width: 800px;
+		}
+	}
+
+	&__paragraph {
+		margin: em($info-gap) 0 em($info-gap) 0;
+	}
+}

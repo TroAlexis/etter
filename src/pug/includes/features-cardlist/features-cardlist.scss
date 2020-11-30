@@ -1,0 +1,54 @@
+@import '~Includes/feature-card/feature-card';
+@import '~Includes/section-heading/section-heading';
+
+.features-cardlist {
+
+	display: flex;
+	justify-content: space-between;
+	@include mq('desktop', max) {
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	@include mq('tablet', max) {
+		justify-content: space-between;
+
+		font-size: 15px;
+	}
+
+	@include mq('tablet-small', max) {
+		justify-content: center;
+	}
+
+	@include mq('phablet', max) {
+		font-size: 14px;
+	}
+	@include mq('phone', max) {
+		font-size: 12.5px;
+	}
+
+
+	&__card {
+		flex-basis: 23.7%;
+		width: 23.7%;
+
+		@include mq('desktop',max) {
+			flex-basis: 40%;
+			width: 40%;
+			margin-bottom: em(24px);
+		}
+
+		@include mq('tablet-wide', max) {
+			flex-basis: 48%;
+			width: 48%;
+		}
+		@include mq('tablet-small', max) {
+			flex-basis: 85%;
+			width: 85%;
+		}
+		@include mq('phone-wide', max) {
+			flex-basis: 100%;
+			width: 100%;
+		}
+
+	}
+}

@@ -1,0 +1,6 @@
+mixin lead(heading, subheading)
+    .lead&attributes(attributes)
+        .lead__wrapper
+            h1.lead__heading!=heading
+            p.lead__subheading=subheading
+            block

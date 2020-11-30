@@ -1,0 +1,6 @@
+include ../collapsible/collapsible
+mixin collapsible-list(collapsibles)
+    ul.collapsible-list
+        each collapsible in collapsibles
+          +collapsible(collapsible)
+          hr.collapsible__separator

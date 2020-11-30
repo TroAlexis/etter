@@ -1,0 +1,6 @@
+include ../check-item/check-item
+
+mixin check-list(items, cols)
+    ul.check-list&attributes(attributes)
+        each item in items
+          +check-item(item).check-list__item

@@ -1,0 +1,22 @@
+include ../lead/lead
+section.translate-urgent
+    .translate-urgent__wrapper.u-container
+        +lead(
+            'Срочный перевод',
+            'Получить профессиональный перевод теперь так же просто как вызвать такси'
+        ).translate-urgent__lead
+            include ../check-list/check-list
+            .translate-urgent__info
+                p Получите сверхбыстрый перевод небольшого текста объемом до 2 страниц a4. Ведите деловую переписку, публикуйте посты в ваших соц. сетях и блогах на английском языке. Платить можно после перевода, мы вам доверяем.
+            +check-list([
+                'Письма',
+                'Резюме',
+                'Небольшие статьи',
+            ]).translate-urgent__checklist
+        include ../hero-img/hero-img
+        +hero-img({
+          x1: require('Images/translate-urgent.jpg'),
+          x2: require('Images/translate-urgent-2x.jpg'),
+          mob: require('Images/translate-urgent-mob.jpg'),
+          alt: 'Woman working at the computer trying to meet the deadline'
+        }).translate-urgent__hero-img

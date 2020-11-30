@@ -1,0 +1,16 @@
+@import 'shared';
+@import '~Includes/translate-urgent/translate-urgent';
+@import '~Includes/translate-websites/translate-websites';
+@import '~Includes/features-cardlist/features-cardlist';
+@import '~Includes/collapsible-list/collapsible-list';
+
+
+.index-page {
+	padding: 60px 40px;
+}
+
+.translate-websites,
+.translate-urgent,
+.features-cardlist {
+	margin-bottom: 200px;
+}

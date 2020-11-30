@@ -1,0 +1,30 @@
+.feature-card {
+	width: 322px;
+	padding: em(40px) em(32px);
+
+	background: #fff;
+
+	border: 1px solid #ededed;
+
+	&__icon {
+		@include size(32px);
+		margin-bottom: em(29px);
+	}
+
+	&__heading {
+		margin-bottom: em(15px);
+
+		color: map-get($colors, 'body');
+		font-weight: 600;
+		font-size: em(20px);
+		line-height: 130%;
+
+		letter-spacing: -0.01em;
+	}
+
+	&__info {
+		@extend %subtext;
+		line-height: 162%;
+		letter-spacing: -0.01em;
+	}
+}

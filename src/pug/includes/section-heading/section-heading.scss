@@ -1,0 +1,9 @@
+.section-heading {
+	margin-bottom: em(56px, 36px);
+
+	color: map-get($colors, 'body');
+	font-weight: 600;
+	font-size: rem(36px);
+	line-height: 110%;
+	text-align: center;
+}
